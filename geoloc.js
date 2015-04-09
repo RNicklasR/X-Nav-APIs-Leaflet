@@ -22,7 +22,7 @@ $(document).ready(function() {
 			map.on('click', function(e) {
     				//alert(e.latlng);
   				//marker.bindPopup(e.latlng.toString()).openPopup();
-				L.popup.setLatLng(e.latlng);
+				L.marker(e.latlng).addTo(map).bindPopup("coords: "+e.latlng).openpopup();
 				//L.circle(e.latlng, radius).addTo(map);
 			});
 		//}
